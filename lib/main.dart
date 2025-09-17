@@ -133,8 +133,8 @@ class ProfileHeader extends StatelessWidget {
               radius: 55,
               backgroundColor: Colors.grey.shade200,
               child: ClipOval(
-                child: Image.network(
-                  'https://api.dicebear.com/7.x/avataaars/png?seed=Chathura&backgroundColor=2196f3&skinColor=light&topType=shortHair&facialHairType=beard&clothesType=blazer&size=200',
+                child: Image.asset(
+                  'assets/imgs/profile_pic.jpg',
                   width: 110,
                   height: 110,
                   fit: BoxFit.cover,
@@ -147,19 +147,6 @@ class ProfileHeader extends StatelessWidget {
                         Icons.person,
                         size: 60,
                         color: Colors.white,
-                      ),
-                    );
-                  },
-                  loadingBuilder: (context, child, loadingProgress) {
-                    if (loadingProgress == null) return child;
-                    return Container(
-                      width: 110,
-                      height: 110,
-                      color: const Color(0xFF2196F3),
-                      child: const Center(
-                        child: CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                        ),
                       ),
                     );
                   },
